@@ -1,0 +1,58 @@
+"All vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'mattn/emmet-vim'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'pangloss/vim-javascript'
+Plugin 'nanotech/jellybeans.vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+filetype plugin indent on    " required
+
+colorscheme jellybeans
+syntax on
+
+set smartindent
+set nu
+set hlsearch
+set ignorecase
+set noet
+set tabstop=4
+
+" Resize split when window is resized
+au VimResized * :wincmd =
+
+" for jade/html files, 2 spaces
+autocmd Filetype html setl ts=2 sw=2 sts=0 expandtab
+autocmd Filetype json setl ts=2 sw=2 sts=0 expandtab
+autocmd Filetype javascript setl ts=2 sw=2 sts=0 expandtab
+autocmd Filetype jade setl ts=2 sw=2 sts=0 expandtab
+autocmd Filetype css setl ts=2 sw=2 sts=0 expandtab
+autocmd Filetype pug setl ts=2 sw=2 sts=0 expandtab
+
+"launch nerdTree
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+"resive NerdTree
+:let g:NERDTreeWinSize=20
+
+" disable arrows
+nnoremap <up>	 <nop>
+nnoremap <down>  <nop>
+nnoremap <left>  <nop>
+nnoremap <right> <nop>
+inoremap <up>	 <nop>
+inoremap <down>  <nop>
+inoremap <left>  <nop>
+inoremap <right> <nop>
