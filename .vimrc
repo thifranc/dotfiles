@@ -14,9 +14,17 @@ Plugin 'mattn/emmet-vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'valloric/youcompleteme'
+Plugin 'vim-airline/vim-airline'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+nnoremap J <C-W><C-J>
+nnoremap K <C-W><C-K>
+nnoremap L <C-W><C-L>
+nnoremap H <C-W><C-H>
 
 filetype plugin indent on    " required
 
@@ -46,6 +54,11 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "resive NerdTree
 :let g:NERDTreeWinSize=20
+"toggle NerdTree
+map <C-a> :NERDTreeToggle<CR>
+"close NerdTree if alone
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 
 " disable arrows
 nnoremap <up>	 <nop>
