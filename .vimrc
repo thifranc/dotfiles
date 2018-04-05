@@ -14,7 +14,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nanotech/jellybeans.vim'
-Plugin 'valloric/youcompleteme'
+" Plugin 'valloric/youcompleteme'
 Plugin 'vim-airline/vim-airline'
 
 
@@ -59,13 +59,3 @@ map <C-a> :NERDTreeToggle<CR>
 "close NerdTree if alone
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-
-" disable arrows
-nnoremap <up>	 <nop>
-nnoremap <down>  <nop>
-nnoremap <left>  <nop>
-nnoremap <right> <nop>
-inoremap <up>	 <nop>
-inoremap <down>  <nop>
-inoremap <left>  <nop>
-inoremap <right> <nop>
