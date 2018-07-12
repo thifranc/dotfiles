@@ -45,6 +45,7 @@ au VimResized * :wincmd =
 autocmd Filetype html setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype json setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype javascript setl ts=2 sw=2 sts=0 expandtab
+autocmd Filetype python setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype jade setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype css setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype pug setl ts=2 sw=2 sts=0 expandtab
