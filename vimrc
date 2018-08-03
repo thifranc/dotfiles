@@ -50,6 +50,7 @@ autocmd Filetype python setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype jade setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype css setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype pug setl ts=2 sw=2 sts=0 expandtab
+autocmd Filetype sh setl ts=4 sw=4 sts=0 expandtab
 
 "launch nerdTree
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
