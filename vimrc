@@ -17,7 +17,11 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'nanotech/jellybeans.vim'
 " Plugin 'valloric/youcompleteme'
 Plugin 'vim-airline/vim-airline'
+Plugin 'hashivim/vim-terraform'
 
+" set filtetype to terraform for .tf files
+autocmd BufRead,BufNewFile *.tf set filetype=terraform
+autocmd BufRead,BufNewFile *.tfvars set filetype=terraform
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,6 +50,7 @@ au VimResized * :wincmd =
 autocmd Filetype html setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype json setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype javascript setl ts=2 sw=2 sts=0 expandtab
+autocmd Filetype terraform setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype python setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype jade setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype css setl ts=2 sw=2 sts=0 expandtab
