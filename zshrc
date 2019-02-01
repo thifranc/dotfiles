@@ -1,10 +1,11 @@
-source ./secret
+
+HOME=/home/thibault
+source "$HOME/dotfiles/secret"
 
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/bin:/sbin:/usr/local/bin:$PATH
 
-HOME=/home/thibault
 # Path to your oh-my-zsh installation.
   export ZSH=$HOME/.oh-my-zsh
 
@@ -25,6 +26,7 @@ for file in $BASH_UTILS/*; do
 done
 fi
 
+alias cdp="cd ~/octopuce/git/puppet-environment"
 alias ptestconf="bundle exec rspec --format documentation --color --pattern spec/classes/"
 alias xd="xdg-open"
 alias hist="history | grep"
