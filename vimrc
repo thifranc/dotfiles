@@ -69,7 +69,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "resive NerdTree
 :let g:NERDTreeWinSize=20
 "toggle NerdTree
-map <C-j> :NERDTreeToggle<CR>
+map <C-P> :NERDTreeToggle<CR>
 "close NerdTree if alone
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
