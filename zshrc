@@ -31,9 +31,8 @@ alias vimu="echo 'mkdir ~/.vim/bundle 2>/dev/null && git clone https://github.co
 
 alias cdp="cd ~/octopuce/git/puppet-environment"
 alias cdo="cd ~/octopuce/doc/ ; vim"
-alias ptestconf="bundle exec rspec --format documentation --color --pattern spec/classes/"
 alias xd="xdg-open"
-alias hist="history | grep"
+alias hs="history | grep"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias py="python "
@@ -42,9 +41,15 @@ alias reload_path="export PATH=\$PATH"
 alias appart="pbcopy < ~/appart.txt"
 alias coloc="pbcopy < ~/coloc.txt"
 
+#runs only as sudo
+alias iotop="sudo iotop"
+
 #alias octopuce
 alias s="ssh -A -l root"
 alias gr='grep -RniH --color '
+
+#alias arnaud
+#alias srv="$1" ; echo -e 'GET services\nColumns: host_name\nFilter: state = 2\nFilter: description = '$srv'\n' | ssh root@ubal unixcat /var/lib/nagios3/rw/live
 
 export INFO_PATH=$HOME/Documents
 export EDITOR=vim
