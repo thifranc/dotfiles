@@ -6,7 +6,7 @@ source "$HOME/dotfiles/secret"
 
 
 # If you come from bash you might have to change your $PATH.
-export PATH=/bin:/sbin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:/bin:/sbin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
   export ZSH=$HOME/.oh-my-zsh
@@ -38,8 +38,6 @@ alias pbpaste='xclip -selection clipboard -o'
 alias py="python "
 alias internet="ping 8.8.8.8"
 alias reload_path="export PATH=\$PATH"
-alias appart="pbcopy < ~/appart.txt"
-alias coloc="pbcopy < ~/coloc.txt"
 
 #runs only as sudo
 alias iotop="sudo iotop"
@@ -47,6 +45,7 @@ alias iotop="sudo iotop"
 #alias octopuce
 alias s="ssh -A -l root"
 alias gr='grep -RniH --color '
+alias psgr='ps fauxww | head -1 && ps fauxww | grep --color -iE'
 
 #alias arnaud
 #alias srv="$1" ; echo -e 'GET services\nColumns: host_name\nFilter: state = 2\nFilter: description = '$srv'\n' | ssh root@ubal unixcat /var/lib/nagios3/rw/live

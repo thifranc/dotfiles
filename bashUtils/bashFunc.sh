@@ -23,3 +23,24 @@ dockerGroundZero(){
 gcomit(){
 	git add . ; git commit -m "$1" ; git push origin $(git_current_branch)
 }
+
+yaki () 
+{ 
+    if [ $# -gt 0 ] && [ ! "$1" = 'up' ] && [ ! "$1" = 'down' ]; then
+        echo 'usage: yaki [up|down], defaults to up if no args';
+        return;
+    fi;
+    if [ $# -gt 0 ]; then
+        if [ "$1" = 'up' ]; then
+            ARG='\+';
+        else
+            if [ "$1" = 'down' ]; then
+                ARG='\-';
+            fi;
+        fi;
+    else
+        ARG='\+';
+    fi;
+    service --status-all 2> /dev/null | grep -E "^\s\[\s${ARG}"
+}
+

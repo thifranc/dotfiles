@@ -46,6 +46,8 @@ au VimResized * :wincmd =
 
 " set puppet filetype for .pp extension files
 autocmd BufRead,BufNewFile *.pp set filetype=puppet
+" set ruby filetype for .rb extension files
+autocmd BufRead,BufNewFile *.rb set filetype=ruby
 " set filtetype to terraform for .tf files
 autocmd BufRead,BufNewFile *.tf set filetype=terraform
 autocmd BufRead,BufNewFile *.tfvars set filetype=terraform
@@ -61,6 +63,7 @@ autocmd Filetype pug setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype yaml setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype puppet setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype terraform setl ts=2 sw=2 sts=0 expandtab
+autocmd Filetype ruby setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype sh setl ts=4 sw=4 sts=0 expandtab
 
 "launch nerdTree
