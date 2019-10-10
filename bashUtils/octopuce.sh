@@ -1,1 +1,0 @@
-/home/thibault/octopuce/git/adminsys/scripts/bashUtils/octopuce.sh

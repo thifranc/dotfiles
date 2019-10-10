@@ -65,6 +65,7 @@ autocmd Filetype puppet setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype terraform setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype ruby setl ts=2 sw=2 sts=0 expandtab
 autocmd Filetype sh setl ts=4 sw=4 sts=0 expandtab
+autocmd Filetype php setl ts=4 sw=4 sts=0 expandtab
 
 "launch nerdTree
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif

@@ -1,12 +1,13 @@
 
 HOME=/home/thibault
+export HISTSIZE=100000
 #source env var that should not be displayed, neither should they be versionned on git / github
 #cause bad guys lurking ya know
 source "$HOME/dotfiles/secret"
 
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.local/bin:/bin:/sbin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.octoHelpers:/bin:/sbin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
   export ZSH=$HOME/.oh-my-zsh
@@ -30,7 +31,7 @@ fi
 alias vimu="echo 'mkdir ~/.vim/bundle 2>/dev/null && git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree' | pbcopy"
 
 alias cdp="cd ~/octopuce/git/puppet-environment"
-alias cdo="cd ~/octopuce/doc/ ; vim"
+alias cda="cd ~/octopuce/git/ansible"
 alias xd="xdg-open"
 alias hs="history | grep"
 alias pbcopy='xclip -selection clipboard'
@@ -38,17 +39,16 @@ alias pbpaste='xclip -selection clipboard -o'
 alias py="python "
 alias internet="ping 8.8.8.8"
 alias reload_path="export PATH=\$PATH"
+alias cata="xdg-open ~/.cataHid.png"
 
 #runs only as sudo
 alias iotop="sudo iotop"
 
 #alias octopuce
+alias cssh="/usr/bin/cssh -l root -K1"
 alias s="ssh -A -l root"
 alias gr='grep -RniH --color '
 alias psgr='ps fauxww | head -1 && ps fauxww | grep --color -iE'
-
-#alias arnaud
-#alias srv="$1" ; echo -e 'GET services\nColumns: host_name\nFilter: state = 2\nFilter: description = '$srv'\n' | ssh root@ubal unixcat /var/lib/nagios3/rw/live
 
 export INFO_PATH=$HOME/Documents
 export EDITOR=vim
