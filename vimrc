@@ -9,6 +9,10 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+"
+" ctrl-P + cmatcher
+"
+"
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
@@ -40,6 +44,9 @@ set hlsearch
 set ignorecase
 set noet
 set tabstop=4
+set shiftwidth=4
+set softtabstop=0
+set expandtab
 
 " Resize split when window is resized
 au VimResized * :wincmd =

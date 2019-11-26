@@ -64,3 +64,8 @@ extract () {
 		echo "'$1' is not a valid file"
 	fi
 }
+
+meteo () {
+      curl "https://sky.webionite.com/$1"
+}
+
