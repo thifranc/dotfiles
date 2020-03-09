@@ -17,6 +17,7 @@ ZSH_THEME="gianu"
 plugins=(git copyfile)
 
 export BASH_UTILS="$HOME/.bashUtils"
+export PGDATABASE=postgres
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,7 +38,7 @@ alias hs="history | grep"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 alias py="python "
-alias internet="ping 8.8.8.8"
+alias internet="ping 1.1.1.1"
 alias reload_path="export PATH=\$PATH"
 alias cata="xdg-open ~/.cataHid.png"
 
@@ -45,17 +46,18 @@ alias cata="xdg-open ~/.cataHid.png"
 alias iotop="sudo iotop"
 
 #alias octopuce
+
+alias nocomment="grep -Ev '^\s*([;#].*)?$' "
 alias cssh="/usr/bin/cssh -l root -K1"
 alias s="ssh -A -l root"
 alias gr='grep -RniH --color '
 alias psgr='ps fauxww | head -1 && ps fauxww | grep --color -iE'
+alias cdtemp='cd $(mktemp -d)'
 
-export INFO_PATH=$HOME/Documents
 export EDITOR=vim
 
 #here begin the lines added by todo_list_github
 export TODO_PATH=$HOME/todo
-export INFO_PATH=$HOME/Documents
 export SSH_PATH=$HOME/.ssh/id_rsa
 
 	#export SSH_KEY=your_ssh_passphrase (optional)
@@ -70,7 +72,6 @@ export SSH_PATH=$HOME/.ssh/id_rsa
 	then
 		sshConnect ${SSH_PATH} ${SSH_KEY}
 		gitWatcher $TODO_PATH
-		gitWatcher $INFO_PATH
 	else
 		echo git has already been updated
 	fi
