@@ -60,20 +60,25 @@ export EDITOR=vim
 export TODO_PATH=$HOME/todo
 export SSH_PATH=$HOME/.ssh/id_rsa
 
-	#export SSH_KEY=your_ssh_passphrase (optional)
-	\. "${TODO_PATH}"/.todoCompletion
-	source "${TODO_PATH}"/.todo.sh
-	#here end the lines added by todo_list_github
+#export SSH_KEY=your_ssh_passphrase (optional)
+\. "${TODO_PATH}"/.todoCompletion
+source "${TODO_PATH}"/.todo.sh
+#here end the lines added by todo_list_github
 
 
-	#new lines to enable Github auto-pulling
-	source "${TODO_PATH}/.githubPulling.sh"
-	if ! pgrep -x ssh-agent > /dev/null
-	then
-		sshConnect ${SSH_PATH} ${SSH_KEY}
-		gitWatcher $TODO_PATH
-	else
-		echo git has already been updated
-	fi
-	#end of lines to enable Github auto-pulling
-	
+#new lines to enable Github auto-pulling
+source "${TODO_PATH}/.githubPulling.sh"
+if ! pgrep -x ssh-agent > /dev/null
+then
+	sshConnect ${SSH_PATH} ${SSH_KEY}
+	gitWatcher $TODO_PATH
+else
+	echo git has already been updated
+    ssh-add -q
+fi
+#end of lines to enable Github auto-pulling
+
+gitocto() {
+	gitWatcher /home/thibault/octopuce/git/adminsys/
+	gitWatcher '/home/thibault/octopuce/git/puppet-environment/!production'
+}
